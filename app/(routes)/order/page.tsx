@@ -47,7 +47,7 @@ const OrderPage = async () => {
     );
     
   return (
-    <div className="flex-col bg-white dark:bg-[#020817] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] min-h-screen">
+    <div className="flex-col bg-[#E6E3DA] dark:bg-[#020817] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] min-h-screen">
         <div className="flex-1 space-y-4 p-8 pt-6">
             <OrderClient data={formattedOrders} payment={allPaymentDetails} />
         </div>

@@ -53,7 +53,7 @@ export function DataTable<TData, TValue>({
   })
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 rounded-xl relative backdrop-blur-sm bg-slate-100/5 dark:bg-white/5 border-slate-600/30 dark:border-white/40 border">
+    <div className="p-4 sm:p-6 lg:p-8 rounded-xl relative backdrop-blur-sm bg-slate-100/5 dark:bg-[#E6E3DA]/5 border-slate-600/30 dark:border-white/40 border">
       <div className="flex items-center py-4">
         <Input
           placeholder="Search"

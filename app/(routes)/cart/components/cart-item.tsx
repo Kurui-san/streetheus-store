@@ -21,7 +21,7 @@ const CartItem: React.FC<CartItemProps> = ({
     }
 
     return (
-        <li className="flex py-6 border-b backdrop-blur-sm bg-slate-100/5 dark:bg-white/5 rounded-xl border-slate-600/40 dark:border-white/40 border p-3">
+        <li className="flex py-6 border-b backdrop-blur-sm bg-slate-100/5 dark:bg-[#E6E3DA]/5 rounded-xl border-slate-600/40 dark:border-white/40 border p-3">
             <div className="relative h-24 w-24 rounded-md overflow-hidden sm:h-48 sm:w-48 border border-white">
                 <Image
                     fill

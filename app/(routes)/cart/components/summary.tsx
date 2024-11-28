@@ -113,7 +113,7 @@ const Summary = () => {
 
   return ( 
     <div
-      className="mt-16 rounded-lg backdrop-blur-sm bg-slate-100/5 dark:bg-white/5 border-slate-600/40 dark:border-white/40 border px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+      className="mt-16 rounded-lg backdrop-blur-sm bg-slate-100/5 dark:bg-[#E6E3DA]/5 border-slate-600/40 dark:border-white/40 border px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
     >
       <h2 className="text-lg font-medium text-gray-900 dark:text-gray-200">
         Order summary

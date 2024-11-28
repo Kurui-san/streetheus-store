@@ -90,10 +90,10 @@ export const InfosModal: React.FC<AlertModalProps> = ({
             )}
           />
           <div className="pt-6 space-x-2 flex items-center justify-end w-full">
-            <Button type="button" disabled={loading} onClick={onClose} className="bg-white text-black">
+            <Button type="button" disabled={loading} onClick={onClose} className="bg-[#E6E3DA] text-black">
               Cancel
             </Button>
-            <Button type="submit" disabled={loading} className="text-red-500 bg-white">
+            <Button type="submit" disabled={loading} className="text-red-500 bg-[#E6E3DA]">
               {loading ? "Processing..." : "Continue"}
             </Button>
           </div>

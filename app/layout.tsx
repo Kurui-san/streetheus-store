@@ -13,8 +13,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Streetheus | Store',
-  description: 'Streetheus admin dashboard for market use.',
+  title: 'Streethues | Store',
+  description: 'Streethues admin dashboard for market use.',
 }
 
 export default function RootLayout({

@@ -67,7 +67,7 @@ const NavbarActions = () => {
                 <ModeToggle />
                 <button onClick={() => router.push("/cart")} className="p-[3px] relative flex items-center gap-x-2">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
-                    <div className="px-8 py-2 bg-white dark:bg-[#020817] flex items-center  rounded-full  relative group transition duration-200 text-white hover:bg-transparent dark:hover:bg-transparent group">
+                    <div className="px-8 py-2 bg-[#E6E3DA] dark:bg-[#020817] flex items-center  rounded-full  relative group transition duration-200 text-white hover:bg-transparent dark:hover:bg-transparent group">
                         <ShoppingBag
                             size={20}
                             className="text-[#020817] group-hover:text-white dark:text-white"
@@ -80,7 +80,7 @@ const NavbarActions = () => {
                 <SignedIn>
                     <button onClick={() => router.push("/order")} className="p-[3px] relative flex items-center gap-x-2">
                         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
-                        <div className="px-8 py-2 bg-white dark:bg-[#020817] flex items-center  rounded-full  relative group transition duration-200 text-white hover:bg-transparent dark:hover:bg-transparent group">
+                        <div className="px-8 py-2 bg-[#E6E3DA] dark:bg-[#020817] flex items-center  rounded-full  relative group transition duration-200 text-white hover:bg-transparent dark:hover:bg-transparent group">
                             <TableProperties
                                 size={20}
                                 className="text-[#020817] group-hover:text-white dark:text-white"

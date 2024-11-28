@@ -20,8 +20,8 @@ const ProductPage: React.FC<ProductPagesProps> = async ({
     })
 
     return (
-        <div className="bg-white dark:bg-[#020817] dark:bg-grid-small-white/[0.2] bg-grid-small-rose-400/90 relative">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="bg-[#E6E3DA] dark:bg-[#020817] dark:bg-grid-small-white/[0.2] bg-grid-small-rose-400/90 relative">
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-[#E6E3DA] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <Container>
                 <div className="px-4 py-10 sm:px-6 lg:px-8">
                     <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">

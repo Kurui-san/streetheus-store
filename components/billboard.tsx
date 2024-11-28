@@ -17,7 +17,7 @@ const Billboard: React.FC<BillboardProps> = ({
                 style={{ backgroundImage: `url(${data?.imageUrl})`}}
             >
                 <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
-                    <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+                    <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs text-black ">
                         {data?.label}<br/>
                         <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
                             <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">

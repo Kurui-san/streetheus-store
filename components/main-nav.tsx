@@ -52,7 +52,10 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
     active: pathname === `/category/${route.id}`,
   }));
 
-  const href =  [{label: 'About Us', href: '/about-us'}, {label: 'Contact Us', href: '/contact-us'}]
+  const href = [
+    { label: "About Us", href: "/about-us" },
+    { label: "Contact Us", href: "/contact-us" },
+  ];
 
   const urls = href.map((route) => ({
     href: route.href,
@@ -72,32 +75,47 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-[200px] justify-between bg-[#E6E3DA] text-gray-800 hover:bg-[#d8d5cc] hover:text-gray-900 border-[#78756b] hover:border-[#d8d5cc] transition-colors duration-200"
+            className="w-[200px] justify-between bg-[#E6E3DA] dark:bg-black text-gray-800 dark:text-gray-200 hover:bg-[#d8d5cc] dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-300 border-[#78756b] dark:border-gray-600 hover:border-[#d8d5cc] dark:hover:border-gray-500 transition-colors duration-200"
           >
             <Store className="mr-2 h-4 w-4" />
             <span className="flex-1 text-left truncate">
               {id && data
-                ? data.find((route) => route.id === id)?.name || "Select page..."
+                ? data.find((route) => route.id === id)?.name ||
+                  "Select page..."
                 : "Select Categories"}
             </span>
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[200px] p-0 bg-[#E6E3DA] border-[#d8d5cc]">
+        <PopoverContent className="w-[200px] p-0 bg-[#E6E3DA] dark:bg-black border-[#d8d5cc] dark:border-gray-700">
           <Command className="bg-transparent">
-            <CommandInput placeholder="Search Categories..." className="bg-[#E6E3DA] text-gray-800 placeholder-gray-500" />
-            <CommandEmpty className="text-gray-500">No category found.</CommandEmpty>
+            <CommandInput
+              placeholder="Search Categories..."
+              className="bg-[#E6E3DA] dark:bg-black text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400"
+            />
+            <CommandEmpty className="text-gray-500 dark:text-gray-400">
+              No category found.
+            </CommandEmpty>
             <CommandList className="max-h-[300px] overflow-y-auto">
-              <CommandItem className="cursor-pointer hover:bg-[#d8d5cc]">
-                <Link href={"/"} className="flex items-center w-full text-gray-800">
+              <CommandItem className="cursor-pointer hover:bg-[#d8d5cc] dark:hover:bg-gray-800">
+                <Link
+                  href={"/"}
+                  className="flex items-center w-full text-gray-800 dark:text-gray-200"
+                >
                   <Home className="mr-2 h-4 w-4" />
                   <span className="flex-1">Home</span>
                   {pathname === "/" && <Check className="ml-2 h-4 w-4" />}
                 </Link>
               </CommandItem>
               {routes.map((route, key) => (
-                <CommandItem key={key} className="cursor-pointer hover:bg-[#d8d5cc]">
-                  <Link href={route.href} className="flex items-center w-full text-gray-800">
+                <CommandItem
+                  key={key}
+                  className="cursor-pointer hover:bg-[#d8d5cc] dark:hover:bg-gray-800"
+                >
+                  <Link
+                    href={route.href}
+                    className="flex items-center w-full text-gray-800 dark:text-gray-200"
+                  >
                     <Store className="mr-2 h-4 w-4" />
                     <span className="flex-1 truncate">{route.label}</span>
                     {route.active && <Check className="ml-2 h-4 w-4" />}
@@ -109,22 +127,23 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
         </PopoverContent>
       </Popover>
       <div className="flex items-center space-x-4 lg:space-x-6 ml-4">
-          {urls.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={cn(
-                "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
-                route.active ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500" : "text-muted-foreground"
-              )}
-            >
-              {route.label}
-            </Link>
-          ))}
-        </div>
+        {urls.map((route) => (
+          <Link
+            key={route.href}
+            href={route.href}
+            className={cn(
+              "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
+              route.active
+                ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
+                : "text-muted-foreground"
+            )}
+          >
+            {route.label}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 };
 
 export default MainNav;
-

@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  Coins,
   Facebook,
   Instagram,
   MessageCircle,
@@ -62,8 +63,8 @@ export default function ContactPage() {
         <div className="mt-4 pt-4 border-t">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <MessageCircle className="h-4 w-4" />
-              <span>Contact via GCash:</span>
+              <Coins className="h-4 w-4" />
+              <span>Payment via GCash:</span>
             </div>
             <span className="font-mono">0967 426 2559</span>
           </div>

@@ -50,8 +50,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           alt="Image"
           className="aspect-square object-cover rounded-md"
         />
-        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
-          <div className="flex gap-x-6 justify-center">
+        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-3 bottom-3">
+          <div className="flex gap-x-6 justify-start">
             <IconButton
               onClick={onPreview}
               icon={
@@ -61,7 +61,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
                 />
               }
             />
-            <IconButton
+            {/* <IconButton
               onClick={onAddToCart}
               icon={
                 <ShoppingCart
@@ -69,7 +69,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
                   className="text-gray-600 border-gray-200 dark:border-gray-100 dark:text-white"
                 />
               }
-            />
+            /> */}
           </div>
         </div>
       </div>
@@ -80,14 +80,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
       <div className="flex items-center justify-between">
         <Currency value={data?.price} />
       </div>
-      {/* //added */}
-      <div className="space-y-2">
-        <h3 className="text-xl font-semibold text-white">
-          New Product (buy 1 take 3)
-        </h3>
-        <p className="text-sm text-zinc-400">New Store</p>
-        <p className="text-lg font-bold text-white">₱1.00</p>
-      </div>
 
       {/* Actions */}
       <div className="flex gap-2">
@@ -97,16 +89,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           className="rounded-full bg-[#E6E3DA]/10 hover:bg-[#E6E3DA]/20"
         >
           <Maximize2 className="h-4 w-4" />
-        </Button>
-        <Button
-          className={cn(
-            "flex-1 rounded-full",
-            "bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700",
-            "text-black font-semibold"
-          )}
-        >
-          <ShoppingCart className="mr-2 h-4 w-4" />
-          Shop Now
         </Button>
       </div>
     </div>

@@ -26,6 +26,16 @@ interface MainNavProps {
   data?: Category[];
 }
 
+const href = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
+];
+
+export const urls = href.map((route) => ({
+  href: route.href,
+  label: route.label,
+}));
+
 const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
   const [open, setOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -50,17 +60,6 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
     href: `/category/${route.id}`,
     label: route.name,
     active: pathname === `/category/${route.id}`,
-  }));
-
-  const href = [
-    { label: "About Us", href: "/about-us" },
-    { label: "Contact Us", href: "/contact-us" },
-  ];
-
-  const urls = href.map((route) => ({
-    href: route.href,
-    label: route.label,
-    active: pathname === `/${route.href}`,
   }));
 
   if (!isMounted) {
@@ -126,16 +125,16 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
           </Command>
         </PopoverContent>
       </Popover>
-      <div className="flex items-center space-x-4 lg:space-x-6 ml-4">
+      <div className="items-center space-x-4 lg:space-x-6 ml-4 hidden md:flex ">
         {urls.map((route) => (
           <Link
             key={route.href}
             href={route.href}
             className={cn(
               "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
-              route.active
-                ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
-                : "text-muted-foreground"
+              // route.active
+              //   ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
+              //   : "text-muted-foreground"
             )}
           >
             {route.label}

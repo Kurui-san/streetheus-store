@@ -40,14 +40,14 @@ const Info: React.FC<InfoProps> = ({
                     <div className="h-6 w-6 rounded-full border border-gray-600 dark:border-gray-100" style={{ backgroundColor: data?.color?.value }} />
                 </div>
             </div>
-            <div className="mt-10 flex items-center gap-x-3">
+            {/* <div className="mt-10 flex items-center gap-x-3">
                 <button onClick={onAddToCart} className="p-[3px] relative flex items-center gap-x-2">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
                     <div className="px-8 py-2  bg-black dark:bg-[#020817] rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent dark:hover:bg-transparent">
                         Add to Cart
                     </div>
                 </button>
-            </div>
+            </div> */}
         </div>
     );
 }

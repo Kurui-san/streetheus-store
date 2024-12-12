@@ -22,14 +22,14 @@ export const OrderClient: React.FC<OrderClientProps> = ({
                 title={`Orders (${data.length})`}
                 description="Monitor your orders."
             />
-            <Separator className="bg-fuchsia-500" />
+            <Separator className="bg-white" />
             <DataTable columns={columns} data={data} searchKey="products" />
             
             <Heading
                 title={`Payment Confirmation (${payment.length})`}
                 description="Monitor your payment confirmation:."
             />
-            <Separator className="bg-fuchsia-500" />
+            <Separator className="bg-white" />
             <DataTable columns={paymentColumns} data={payment} searchKey="products" />
         </>
     )

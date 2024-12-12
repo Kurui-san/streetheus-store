@@ -27,11 +27,11 @@ const Gallery: React.FC<GalleryProps> = ({
                     ))}
                 </Tab.List>
             </div>
-            <Tab.Panels className="aspect-square w-full">
+            <Tab.Panels className="aspect-square w-full ">
                 {images.map((image) => (
                     <Tab.Panel key={image.id}>
                         <Lens hovering={hovering} setHovering={setHovering}>
-                            <div className="relative z-10 aspect-square h-full w-full sm:rounded-lg overflow-hidden">
+                            <div className="relative z-10 aspect-square h-full border-white border-2 w-full sm:rounded-lg overflow-hidden">
                                 <Image
                                     src={image.url}
                                     alt="image"

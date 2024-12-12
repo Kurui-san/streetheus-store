@@ -11,7 +11,7 @@ const Navbar = async () => {
     const categories = await getCategories();
 
     return (
-        <div className="border-b sticky top-0 left-0 z-30 backdrop-blur-sm bg-slate-100/5 dark:bg-[#E6E3DA]/5 border-slate-600/40 dark:border-white/40">
+        <div className="border-b sticky top-0 left-0 z-30 backdrop-blur-sm bg-gradient-to-r from-[#947a70] via-[#bd9d92] border-[#D7BE9A] dark:border-white/40">
             <Container>
                 <div className="relative px-0 sm:px-6 lg:px-8 flex h-16 items-center">
                     <Link href="/" className="ml-4 flex lg:ml-0  gap-x-2">

@@ -35,13 +35,13 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
     const category = await getCategory(params.categoryId);
 
     return (
-        <div className="bg-[#E6E3DA] dark:bg-[#020817] dark:bg-dot-white/[0.5] bg-dot-purple-400">
+        <div className="relative bg-[url('/beige-bg.png')] bg-cover bg-center bg-[#FDF0DA]">
             <Container>
                 <Billboard data={category.billboard} />
                 <div className="px-4 sm:px-6 lg:px-8 pb-24">
                     <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
                         <MobileFilters sizes={sizes} colors={colors} />
-                        <div className="hidden lg:block backdrop-blur-sm bg-slate-100/5 dark:bg-[#E6E3DA]/5 border-slate-600/30 dark:border-white/40 border p-3 rounded-xl">
+                        <div className="hidden lg:block backdrop-blur-sm bg-gradient-to-r from-[#947a70] to-[#bd9d92]  border-[#D7BE9A] border p-3 rounded-xl">
                             <Filter valueKey="sizeId" name="Sizes" data={sizes} />
                             <Filter valueKey="colorId" name="Colors" data={colors} />
                         </div>

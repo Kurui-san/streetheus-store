@@ -71,10 +71,10 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
+            variant="biege"
             role="combobox"
             aria-expanded={open}
-            className="w-[200px] justify-between bg-[#E6E3DA] dark:bg-black text-gray-800 dark:text-gray-200 hover:bg-[#d8d5cc] dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-300 border-[#78756b] dark:border-gray-600 hover:border-[#d8d5cc] dark:hover:border-gray-500 transition-colors duration-200"
+            className="w-[200px] justify-between  text-white dark:text-gray-200  transition-colors duration-200"
           >
             <Store className="mr-2 h-4 w-4" />
             <span className="flex-1 text-left truncate">
@@ -86,13 +86,13 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[200px] p-0 bg-[#E6E3DA] dark:bg-black border-[#d8d5cc] dark:border-gray-700">
-          <Command className="bg-transparent">
+        <PopoverContent className="w-[200px] p-0 bg-gradient-to-r from-[#947a70] via-[#bd9d92]  border-[#D7BE9A]">
+          <Command>
             <CommandInput
               placeholder="Search Categories..."
-              className="bg-[#E6E3DA] dark:bg-black text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400"
+              className="bg-white text-[#947a70] "
             />
-            <CommandEmpty className="text-gray-500 dark:text-gray-400">
+            <CommandEmpty className="bg-gradient-to-r from-[#947a70] via-[#bd9d92]  border-[#D7BE9A] text-white">
               No category found.
             </CommandEmpty>
             <CommandList className="max-h-[300px] overflow-y-auto">
@@ -103,7 +103,7 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
                 >
                   <Home className="mr-2 h-4 w-4" />
                   <span className="flex-1">Home</span>
-                  {pathname === "/" && <Check className="ml-2 h-4 w-4" />}
+                  {pathname === "/" && <Check className="ml-2 h-4 w-4 text-white" />}
                 </Link>
               </CommandItem>
               {routes.map((route, key) => (
@@ -131,7 +131,7 @@ const MainNav: React.FC<MainNavProps> = ({ data = [] }) => {
             key={route.href}
             href={route.href}
             className={cn(
-              "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
+              "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-[#D2B48C] hover:to-[#EEDC82] text-white"
               // route.active
               //   ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
               //   : "text-muted-foreground"

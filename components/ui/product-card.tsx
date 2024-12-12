@@ -41,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   return (
     <div
       onClick={handleClick}
-      className=" backdrop-blur-sm bg-slate-100/5 dark:bg-[#E6E3DA]/5 group cursor-pointer rounded-xl border-slate-600/40 dark:border-white/40 border p-3 space-y-4"
+      className=" backdrop-blur-sm dark:bg-[#E6E3DA]/5 group cursor-pointer rounded-xl dark:border-white/40 border p-3 space-y-4 bg-gradient-to-r from-[#947a70] to-[#bd9d92]  border-[#D7BE9A]"
     >
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
@@ -57,7 +57,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
               icon={
                 <Expand
                   size={20}
-                  className="text-gray-600 border-gray-200 dark:border-gray-100 dark:text-white"
+                  className="text-white border-gray-200 dark:border-gray-100 dark:text-white"
                 />
               }
             />
@@ -74,10 +74,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
       </div>
       <div>
-        <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-sm text-gray-500">{data.category?.name}</p>
+        <p className="font-semibold text-lg text-white">{data.name}</p>
+        <p className="text-sm text-white">{data.category?.name}</p>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between text-white">
         <Currency value={data?.price} />
       </div>
 
@@ -88,7 +88,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           size="icon"
           className="rounded-full bg-[#E6E3DA]/10 hover:bg-[#E6E3DA]/20"
         >
-          <Maximize2 className="h-4 w-4" />
+          <Maximize2 className="h-4 w-4 text-white" />
         </Button>
       </div>
     </div>

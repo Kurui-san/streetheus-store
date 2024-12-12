@@ -21,8 +21,8 @@ export default function AboutContent() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl font-bold text-center text-white mb-2">About Our Store</h1>
-        <p className="text-xl text-center text-white h-8">{typedText}</p>
+        <h1 className="text-4xl font-bold text-center text-black mb-2">About Our Store</h1>
+        <p className="text-xl text-center h-8 text-black">{typedText}</p>
       </motion.div>
 
       <div className="grid gap-8 grid-cols-1 mt-8">
@@ -119,7 +119,7 @@ export default function AboutContent() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       >
-        <p className="text-xl text-white">
+        <p className="text-xl text-black">
           We appreciate your understanding and look forward to serving you!
         </p>
       </motion.div>

@@ -45,7 +45,7 @@ const Filter: React.FC<FilterProps> = ({
 
     return (
         <div className="mb-8">
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-lg font-semibold text-black">
                 {name}
             </h3>
             <hr className="my-4" />

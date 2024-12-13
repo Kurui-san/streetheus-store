@@ -74,10 +74,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
       </div>
       <div>
-        <p className="font-semibold text-lg text-white">{data.name}</p>
-        <p className="text-sm text-white">{data.category?.name}</p>
+        <p className="font-semibold text-lg text-black">{data.name}</p>
+        <p className="text-sm text-black">{data.category?.name}</p>
       </div>
-      <div className="flex items-center justify-between text-white">
+      <div className="flex items-center justify-between text-black">
         <Currency value={data?.price} />
       </div>
 

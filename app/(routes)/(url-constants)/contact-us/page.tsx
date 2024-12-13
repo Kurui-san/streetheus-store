@@ -18,7 +18,7 @@ import {
 
 export default function ContactPage() {
   return (
-    <Card className="w-full min-h-screen max-w-md mx-auto bg-[#f8f8f8] dark:bg-black mt-6">
+    <Card className="w-full max-w-md mx-auto bg-[#f8f8f8] dark:bg-black mt-6">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-light tracking-wider text-black">
           streethues.
